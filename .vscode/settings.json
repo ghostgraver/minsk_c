@@ -1,0 +1,289 @@
+{
+    // 隐藏某些文件
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        // "**/build": true,
+    },
+    // 保存时自动格式化
+    "editor.formatOnSave": true,
+    "[cmake]": {
+        "editor.defaultFormatter": "josetr.cmake-language-support-vscode"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[h]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    // 修改了注释的颜色
+    "editor.tokenColorCustomizations": {
+        "comments": {
+            "foreground": "#4a524e",
+            "fontStyle": ""
+        }
+    },
+    // 右侧标尺
+    "editor.rulers": [
+        120
+    ],
+    // 关闭形参显示
+    "editor.inlayHints.enabled": "off",
+    // clang tidy 配置
+    "clang-tidy.buildPath": "build/ninja-release",
+    "clang-tidy.checks": [
+        // //custom checks
+        // "performance-*",
+        // "bugprone-*",
+        // "portability-*",
+        // "modernize-*",
+        // "cppcoreguidelines-*",
+        // "google-*",
+        // "readability-*",
+        // //all checks
+        // "*",
+        //Clion checks
+        "bugprone-argument-comment",
+        "bugprone-assert-side-effect",
+        "bugprone-bad-signal-to-kill-thread",
+        "bugprone-branch-clone",
+        "bugprone-copy-constructor-init",
+        "bugprone-dangling-handle",
+        "bugprone-dynamic-static-initializers",
+        "bugprone-fold-init-type",
+        "bugprone-forward-declaration-namespace",
+        "bugprone-forwarding-reference-overload",
+        "bugprone-inaccurate-erase",
+        "bugprone-incorrect-roundings",
+        "bugprone-integer-division",
+        "bugprone-lambda-function-name",
+        "bugprone-macro-parentheses",
+        "bugprone-macro-repeated-side-effects",
+        "bugprone-misplaced-operator-in-strlen-in-alloc",
+        "bugprone-misplaced-pointer-arithmetic-in-alloc",
+        "bugprone-misplaced-widening-cast",
+        "bugprone-move-forwarding-reference",
+        "bugprone-multiple-statement-macro",
+        "bugprone-narrowing-conversions",
+        "bugprone-no-escape",
+        "bugprone-not-null-terminated-result",
+        "bugprone-parent-virtual-call",
+        "bugprone-posix-return",
+        "bugprone-reserved-identifier",
+        "bugprone-sizeof-container",
+        "bugprone-sizeof-expression",
+        "bugprone-string-constructor",
+        "bugprone-string-integer-assignment",
+        "bugprone-string-literal-with-embedded-nul",
+        "bugprone-suspicious-enum-usage",
+        "bugprone-suspicious-include",
+        "bugprone-suspicious-memory-comparison",
+        "bugprone-suspicious-memset-usage",
+        "bugprone-suspicious-missing-comma",
+        "bugprone-suspicious-semicolon",
+        "bugprone-suspicious-string-compare",
+        "bugprone-swapped-arguments",
+        "bugprone-terminating-continue",
+        "bugprone-throw-keyword-missing",
+        "bugprone-too-small-loop-variable",
+        "bugprone-undefined-memory-manipulation",
+        "bugprone-undelegated-constructor",
+        "bugprone-unhandled-self-assignment",
+        "bugprone-unused-raii",
+        "bugprone-unused-return-value",
+        "bugprone-use-after-move",
+        "bugprone-virtual-near-miss",
+        "boost-use-to-string",
+        "cert-dcl03-c",
+        "cert-dcl21-cpp",
+        "cert-dcl58-cpp",
+        "cert-err34-c",
+        "cert-err52-cpp",
+        "cert-err58-cpp",
+        "cert-err60-cpp",
+        "cert-flp30-c",
+        "cert-msc50-cpp",
+        "cert-msc51-cpp",
+        "cert-oop54-cpp",
+        "cert-str34-c",
+        "cppcoreguidelines-interfaces-global-init",
+        "cppcoreguidelines-narrowing-conversions",
+        "cppcoreguidelines-pro-type-member-init",
+        "cppcoreguidelines-pro-type-static-cast-downcast",
+        "cppcoreguidelines-slicing",
+        "google-default-arguments",
+        "google-explicit-constructor",
+        "google-runtime-operator",
+        "hicpp-exception-baseclass",
+        "hicpp-multiway-paths-covered",
+        "hicpp-signed-bitwise",
+        "misc-misplaced-const",
+        "misc-new-delete-overloads",
+        "misc-no-recursion",
+        "misc-non-copyable-objects",
+        "misc-redundant-expression",
+        "misc-static-assert",
+        "misc-throw-by-value-catch-by-reference",
+        "misc-unconventional-assign-operator",
+        "misc-uniqueptr-reset-release",
+        "modernize-avoid-bind",
+        "modernize-concat-nested-namespaces",
+        "modernize-deprecated-headers",
+        "modernize-deprecated-ios-base-aliases",
+        "modernize-loop-convert",
+        "modernize-make-shared",
+        "modernize-make-unique",
+        "modernize-pass-by-value",
+        "modernize-raw-string-literal",
+        "modernize-redundant-void-arg",
+        "modernize-replace-auto-ptr",
+        "modernize-replace-disallow-copy-and-assign-macro",
+        "modernize-replace-random-shuffle",
+        "modernize-return-braced-init-list",
+        "modernize-shrink-to-fit",
+        "modernize-unary-static-assert",
+        "modernize-use-auto",
+        "modernize-use-bool-literals",
+        "modernize-use-emplace",
+        "modernize-use-equals-default",
+        "modernize-use-equals-delete",
+        "modernize-use-nodiscard",
+        "modernize-use-noexcept",
+        "modernize-use-nullptr",
+        "modernize-use-override",
+        "modernize-use-transparent-functors",
+        "modernize-use-uncaught-exceptions",
+        "mpi-buffer-deref",
+        "mpi-type-mismatch",
+        "openmp-use-default-none",
+        "performance-faster-string-find",
+        "performance-for-range-copy",
+        "performance-implicit-conversion-in-loop",
+        "performance-inefficient-algorithm",
+        "performance-inefficient-string-concatenation",
+        "performance-inefficient-vector-operation",
+        "performance-move-const-arg",
+        "performance-move-constructor-init",
+        "performance-no-automatic-move",
+        "performance-noexcept-move-constructor",
+        "performance-trivially-destructible",
+        "performance-type-promotion-in-math-fn",
+        "performance-unnecessary-copy-initialization",
+        "performance-unnecessary-value-param",
+        "portability-simd-intrinsics",
+        "readability-avoid-const-params-in-decls",
+        "readability-const-return-type",
+        "readability-container-size-empty",
+        "readability-convert-member-functions-to-static",
+        "readability-delete-null-pointer",
+        "readability-deleted-default",
+        "readability-inconsistent-declaration-parameter-name",
+        "readability-make-member-function-const",
+        "readability-misleading-indentation",
+        "readability-misplaced-array-index",
+        "readability-non-const-parameter",
+        "readability-redundant-control-flow",
+        "readability-redundant-declaration",
+        "readability-redundant-function-ptr-dereference",
+        "readability-redundant-smartptr-get",
+        "readability-redundant-string-cstr",
+        "readability-redundant-string-init",
+        "readability-simplify-subscript-expr",
+        "readability-static-accessed-through-instance",
+        "readability-static-definition-in-anonymous-namespace",
+        "readability-string-compare",
+        "readability-uniqueptr-delete-release",
+        "readability-use-anyofallof"
+    ],
+    // clangd 配置
+    "clangd.fallbackFlags": [
+        // 设置clangd代码检查的c++版本，目前默认是c++14
+        "-std=c17",
+        // 增加项目自身头文件依赖路劲，因为使用vs2019编译不会生成compile_command.json文件，项目自己的头文件就不会找到
+        "-I${workspaceFolder}", // 项目根目录
+    ],
+    "clangd.arguments": [
+        //后台分析并保存索引文件
+        "--background-index",
+        //compile_commands.json目录位置
+        "--compile-commands-dir=build/ninja-release",
+        //同时开启的任务数
+        "-j=12",
+        // "--folding-ranges",
+        //"--query-driver=/usr/bin/clang++", //mac上需要配置
+        //启用clang-tidy以提供静态检查
+        "--clang-tidy",
+        //当 clangd 准备就绪时，用它来分析建议
+        "--completion-parse=auto",
+        //建议风格
+        "--completion-style=detailed",
+        //补全函数时，给参数提供占位符，可以使用 Tab 切换下一个占位符，知道函数末尾
+        "--function-arg-placeholders",
+        //默认格式化风格: 可用的有 LLVM, Google, Chromium, Mozilla, Webkit, Microsoft, GNU
+        //也可以编写 .clang-format 自定义风格
+        "--fallback-style=Webkit",
+        //pch 优化的位置(Memory 或 Disk,前者会增加内存开销，但会提升性能)
+        "--pch-storage=disk",
+        //让clangd生成更详细的日志
+        "--log=verbose",
+        // 输出的 JSON 文件更加美观
+        "--pretty",
+        //建议中，已包含头文件的项与还未包含头文件的项会以圆点加以区分
+        "--header-insertion-decorators",
+        //插入建议时自动引入头文件
+        "--header-insertion=iwyu",
+        //全局补全，例如没有#include <iostream>时，也会给出std::cout建议
+        //建议配合"--header-insertion=iwyu"使用
+        "--all-scopes-completion",
+        // 建议的排序方案：hueristics (启发式), decision_forest (决策树)
+        "--ranking-model=decision_forest",
+    ],
+    //借助网上的信息排序建议
+    "clangd.serverCompletionRanking": true,
+    //当其它扩展与 clangd 冲突时警告并建议禁用
+    "clangd.detectExtensionConflicts": true,
+    "cmakeExplorer.buildDir": "${workspaceFolder}/build/gnu-release",
+    // 任务栏 task 快捷按钮
+    "VsCodeTaskButtons.showCounter": true,
+    "VsCodeTaskButtons.tasks": [
+        {
+            "label": "format",
+            "task": "format"
+        },
+        {
+            "label": "tidy",
+            "task": "tidy"
+        },
+        {
+            "label": "$(notebook-delete-cell) clean-all",
+            "task": "clean-all"
+        },
+        {
+            "label": "$(notebook-delete-cell) clean",
+            "task": "clean-release"
+        },
+        {
+            "label": "$(debug-configure) rebuild",
+            "task": "rebuild-release"
+        },
+        {
+            "label": "$(debug-configure) build-release",
+            "task": "build-release"
+        },
+        {
+            "label": "$(notebook-execute) run",
+            "task": "run-release"
+        },
+        {
+            "label": "📖 doc",
+            "task": "doc"
+        }
+    ]
+}

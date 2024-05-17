@@ -1,0 +1,60 @@
+---
+Language:        Cpp
+BasedOnStyle:  Google
+
+# 访问说明符(public、private等)的偏移, -4表示顶格
+AccessModifierOffset: -4
+
+# 延续的行的缩进宽度
+ContinuationIndentWidth: 4
+# 缩进宽度
+IndentWidth: 4
+# tab宽度
+TabWidth: 4
+UseTab: Never
+
+# 连续赋值时，对齐所有等号
+AlignConsecutiveAssignments: true
+
+# 对连续的位域进行对齐
+AlignConsecutiveBitFields: false
+
+# 连续声明时，对齐所有声明的变量名
+AlignConsecutiveDeclarations: true
+
+# 对齐连续的尾随的注释
+AlignTrailingComments: true
+
+# 是否将较短的枚举定义放在一行中
+AllowShortEnumsOnASingleLine: false
+
+# 是否将较短的代码块放在一行中
+AllowShortBlocksOnASingleLine: Never
+
+# 允许短的函数放在同一行: None, InlineOnly(定义在类中), Empty(空函数), Inline(定义在类中，空函数), All
+AllowShortFunctionsOnASingleLine: Empty
+
+# All: lambda 没有超过宽度, 则在同一行 , Empty: 仅允许定义没有参数并且是空的 Lambda 表达式压缩到一行
+AllowShortLambdasOnASingleLine: Empty
+
+# 是否将较短的循环放在一行中
+AllowShortLoopsOnASingleLine: true
+
+# 是否在多行字符串前强制换行
+AlwaysBreakBeforeMultilineStrings: false
+
+# 是否在模板声明后强制换行
+AlwaysBreakTemplateDeclarations: true
+
+# 每行字符的限制，0表示没有限制
+ColumnLimit: 120
+
+# 对 include 排序
+SortIncludes: true
+
+# 宏定义缩进方式: None:不缩进, AfterHash:#后插入空格, #BeforeHash:前插入空格
+IndentPPDirectives: BeforeHash
+
+# 是否允许clang-format尝试重新粘合注释(true/false), 不建议使用
+ReflowComments:  false
+

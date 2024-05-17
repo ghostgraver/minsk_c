@@ -1,0 +1,99 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        // debug 构建
+        {
+            "label": "build-debug",
+            "type": "shell",
+            "windows": {
+                "command": "cmake --preset=windows-debug && cmake --build --preset=windows-debug"
+            },
+            "linux": {
+                "command": "cmake --preset=linux-debug && cmake --build --preset=linux-debug"
+            },
+        },
+        // release 构建
+        {
+            "label": "build-release",
+            "type": "shell",
+            "windows": {
+                "command": "cmake --preset=windows-release && cmake --build --preset=windows-release"
+            },
+            "linux": {
+                "command": "cmake --preset=linux-release && cmake --build --preset=linux-release"
+            }
+        },
+        // 清理 debug
+        {
+            "label": "clean-debug",
+            "type": "shell",
+            "command": "rm -rf build/ninja-debug"
+        },
+        // 清理 release
+        {
+            "label": "clean-release",
+            "type": "shell",
+            "command": "rm -rf build/ninja-release"
+        },
+        // 清理 所有
+        {
+            "label": "clean-all",
+            "type": "shell",
+            "command": "rm -rf build"
+        },
+        // 重新 debug 构建
+        {
+            "label": "rebuild-debug",
+            "type": "shell",
+            "dependsOn": [
+                "clean-debug",
+                "build-debug"
+            ]
+        },
+        // 重新 release 构建
+        {
+            "label": "rebuild-release",
+            "type": "shell",
+            "dependsOn": [
+                "clean-release",
+                "build-release"
+            ]
+        },
+        // 运行 debug
+        {
+            "label": "run-debug",
+            "type": "shell",
+            "command": "cd build/ninja-debug/dist/bin && ./graver",
+            "dependsOn": [
+                "build-debug"
+            ]
+        },
+        // 运行 release
+        {
+            "label": "run-release",
+            "type": "shell",
+            "command": "cd build/ninja-release/dist/bin && ./graver",
+            "dependsOn": [
+                "build-release"
+            ]
+        },
+        // format
+        {
+            "label": "format",
+            "type": "shell",
+            "command": "./format.sh"
+        },
+        {
+            "label": "tidy",
+            "type": "shell",
+            "command": "./tidy.sh"
+        },
+        {
+            "label": "doc",
+            "type": "shell",
+            "command": "./doc.sh"
+        }
+    ]
+}

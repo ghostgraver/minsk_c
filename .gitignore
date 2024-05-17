@@ -1,0 +1,4 @@
+/build
+/vcpkg
+/vcpkg_installed
+/.idea
